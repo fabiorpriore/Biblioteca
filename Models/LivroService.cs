@@ -34,7 +34,7 @@ namespace Biblioteca.Models
             {
                 IQueryable<Livro> query;
                 
-                if(filtro != null)
+                if(filtro == null)
                 {
                     //definindo dinamicamente a filtragem
                     switch(filtro.TipoFiltro)
