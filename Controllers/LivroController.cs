@@ -27,10 +27,10 @@ namespace Biblioteca.Controllers
             {
                 livroService.Atualizar(l);
             }
-    
 
             return RedirectToAction("Listagem");
-        }     
+        }
+
         public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)
         {
             Autenticacao.CheckLogin(this);
@@ -44,7 +44,6 @@ namespace Biblioteca.Controllers
 
             ViewData["livrosPorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : Int32.Parse(itensPorPagina));
             ViewData["PaginaAtual"] = (PaginaAtual!=0 ? PaginaAtual : 1);
-            ViewData["Mensagem"] = "Nem um Registro Encontrato";
 
             LivroService livroService = new LivroService();
             return View(livroService.ListarTodos(objFiltro));

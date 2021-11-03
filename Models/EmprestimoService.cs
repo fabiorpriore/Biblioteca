@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Biblioteca.Models
 {
-    public class EmprestimoService 
+      public class EmprestimoService 
     {
         public void Inserir(Emprestimo e)
         {
@@ -26,6 +26,7 @@ namespace Biblioteca.Models
                 emprestimo.LivroId = e.LivroId;
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
+                emprestimo.Devolvido = e.Devolvido;
 
                 bc.SaveChanges();
             }

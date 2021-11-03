@@ -7,7 +7,7 @@ using System;
 namespace Biblioteca.Controllers
 {
     
-    public class EmprestimoController : Controller
+   public class EmprestimoController : Controller
     {
         public IActionResult Cadastro()
         {
